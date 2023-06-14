@@ -60,13 +60,17 @@ select{
     outline:none;
   }
 
-table{
-    width: 100%;
+
+
+.tableborder{
+  width: 100%;
     padding-left: 10px;
     margin-top: 30px;
     margin-left: 10px;
     margin-right: 20px;
-    background-color: #EBF4FA;
+    background-color: #FFFFF0;
+  border-collapse: collapse;
+  border: 1px solid black;
 }
 
 .checkmark{
@@ -131,16 +135,12 @@ table {
     margin: 0;
   }
   
-  /* .inner-table {
-    width: 100%;
-    padding-left: 0;
-  } */
 
   .mat-column-environment {
-    width: 120px;
+    width: 175px;
   }
 
-  .mat-column-may01 {
+  /*.mat-column-may01 {
     width: 120px;
   }
   .mat-column-may02 {
@@ -166,7 +166,7 @@ table {
   }
   .mat-column-may09 {
     width: 120px;
-  }
+  } */
 
   .dashboard {
     /* Set the desired width */
@@ -212,5 +212,6 @@ table {
   } */
 
   .table2{
-    background-color: #FFFFF0;
+    background-color: #EBF4FA ;
+    padding-left: 0;
   }

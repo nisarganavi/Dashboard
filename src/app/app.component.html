@@ -32,15 +32,15 @@
     <button>Get Summary Plot</button>
   </div>
 <div class="dashboard">
-<table mat-table [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z8">
+<table mat-table [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z8 tableborder">
   <ng-container matColumnDef="{{ column }}" *ngFor="let column of columnsToDisplay; let i = index"  >
     <th mat-header-cell *matHeaderCellDef>{{ column }}</th>
     <td mat-cell *matCellDef="let element">
       <ng-container *ngIf="i !== 0; else firstColumn">
-        <button mat-icon-button color="primary" *ngIf="element[column] >= 192">
+        <button mat-icon-button color="primary" *ngIf="element[column] == true">
           <mat-icon class="checkmark">check_circle</mat-icon>
         </button>
-        <button mat-icon-button color="primary" *ngIf="element[column] < 192">
+        <button mat-icon-button color="primary" *ngIf="element[column] == false">
           <mat-icon class="crossmark">highlight_off</mat-icon>
         </button>
       </ng-container>
@@ -64,10 +64,10 @@
                 <!-- <button mat-icon-button color="primary" [disabled]="!element[column]">
                   <mat-icon>{{ element[column] ? 'check' : '' }}</mat-icon>
                 </button> -->
-                <button mat-icon-button color="primary" *ngIf="isotope[column] >= 96">
+                <button mat-icon-button color="primary" *ngIf="isotope[column] == true">
                   <mat-icon class="checkmark">check_circle</mat-icon>
                 </button>
-                <button mat-icon-button color="primary" *ngIf="isotope[column] < 96">
+                <button mat-icon-button color="primary" *ngIf="isotope[column] == false">
                   <mat-icon class="crossmark">highlight_off</mat-icon>
                 </button>
               </ng-container>

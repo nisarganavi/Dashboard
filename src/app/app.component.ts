@@ -39,143 +39,263 @@ export class AppComponent {
 
 export interface PeriodicElement {
   environment: string;
-  may01: number;
-  may02: number;
-  may03: number;
-  may04: number;
-  may05: number;
-  may06: number;
-  may07: number;
-  may08: number;
-  may09: number;
+  may01: boolean;
+  may02: boolean;
+  may03: boolean;
+  may04: boolean;
+  may05: boolean;
+  may06: boolean;
+  may07: boolean;
+  may08: boolean;
+  may09: boolean;
   isotopes: Isotope[];
 }
 
 export interface Isotope{
   environment: string;
-  may01: number;
-  may02: number;
-  may03: number;
-  may04: number;
-  may05: number;
-  may06: number;
-  may07: number;
-  may08: number;
-  may09: number;
+  may01: boolean;
+  may02: boolean;
+  may03: boolean;
+  may04: boolean;
+  may05: boolean;
+  may06: boolean;
+  may07: boolean;
+  may08: boolean;
+  may09: boolean;
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
   {
     environment: "PYLON", 
-    may01:0, 
-    may02:0, 
-    may03:0, 
-    may04:0, 
-    may05:0, 
-    may06:0, 
-    may07:0, 
-    may08:0,
-    may09:0,
+    may01:true, 
+    may02:true, 
+    may03:true, 
+    may04:true, 
+    may05:true, 
+    may06:true, 
+    may07:true, 
+    may08:true,
+    may09:true,
     isotopes: [
       {
-        environment: "LGW", 
-        may01: 98, 
-        may02: 81, 
-        may03: 99, 
-        may04:100, 
-        may05:89, 
-        may06: 94, 
-        may07:98, 
-        may08:79,
-        may09:98
+        environment: "LGW : Production", 
+        may01: true, 
+        may02: true, 
+        may03: false, 
+        may04: true, 
+        may05: true, 
+        may06: false, 
+        may07: true, 
+        may08: true,
+        may09: true,
       },
       {
-        environment: "SGW", 
-        may01: 89, 
-        may02: 99, 
-        may03: 87, 
-        may04: 92, 
-        may05: 90, 
-        may06:100, 
-        may07:89, 
-        may08:99,
-        may09:98
+        environment: "LGW : Integration US ", 
+        may01: true, 
+        may02: true, 
+        may03: false, 
+        may04: true, 
+        may05: true, 
+        may06: false, 
+        may07: true, 
+        may08: true,
+        may09: true,
+      },
+      {
+        environment: "LGW : Integration AU", 
+        may01: true, 
+        may02: true, 
+        may03: true, 
+        may04: false, 
+        may05: false, 
+        may06: true, 
+        may07: true, 
+        may08: false,
+        may09: true,
+      },
+      {
+        environment: "LGW : Integration JP", 
+        may01: true, 
+        may02: true, 
+        may03: false, 
+        may04: true, 
+        may05: true, 
+        may06: false, 
+        may07: true, 
+        may08: true,
+        may09: true
+      },
+      {
+        environment: "SGW : Production", 
+        may01: true, 
+        may02: false, 
+        may03: true, 
+        may04: true, 
+        may05: true, 
+        may06: false, 
+        may07: true, 
+        may08: true,
+        may09: false
+      },
+      {
+        environment: "SGW : Integration US ", 
+        may01: true, 
+        may02: true, 
+        may03: false, 
+        may04: true, 
+        may05: true, 
+        may06: false, 
+        may07: true, 
+        may08: true,
+        may09: true,
+      },
+      {
+        environment: "SGW : Integration AU", 
+        may01: true, 
+        may02: true, 
+        may03: true, 
+        may04: false, 
+        may05: false, 
+        may06: true, 
+        may07: true, 
+        may08: false,
+        may09: true,
+      },
+      {
+        environment: "SGW : Integration JP", 
+        may01: true, 
+        may02: true, 
+        may03: false, 
+        may04: true, 
+        may05: true, 
+        may06: false, 
+        may07: true, 
+        may08: true,
+        may09: true
       }
     ]
   },
   {
     environment: "MOBIUS", 
-    may01:0, 
-    may02:0, 
-    may03:0, 
-    may04:0, 
-    may05:0, 
-    may06:0, 
-    may07:0, 
-    may08:0,
-    may09:0,
+    may01:true, 
+    may02:true, 
+    may03:true, 
+    may04:true, 
+    may05:true, 
+    may06:true, 
+    may07:true, 
+    may08:true,
+    may09:true,
     isotopes: [
       {
         environment: "Production", 
-        may01: 96, 
-        may02: 99, 
-        may03: 100, 
-        may04:89, 
-        may05:87, 
-        may06: 99, 
-        may07:100, 
-        may08:95,
-        may09:94,
+        may01: true, 
+        may02: true, 
+        may03: true, 
+        may04: false, 
+        may05: false, 
+        may06: true, 
+        may07: true, 
+        may08: false,
+        may09: true,
       },
       {
-        environment: "Integration", 
-        may01: 100, 
-        may02: 98, 
-        may03: 89, 
-        may04:100, 
-        may05:98, 
-        may06: 90, 
-        may07:100, 
-        may08:83,
-        may09:99,
+        environment: "Integration US", 
+        may01: true, 
+        may02: true, 
+        may03: true, 
+        may04: false, 
+        may05: false, 
+        may06: true, 
+        may07: true, 
+        may08: false,
+        may09: true,
+      },
+      {
+        environment: "Integration AU", 
+        may01: true, 
+        may02: true, 
+        may03: true, 
+        may04: false, 
+        may05: false, 
+        may06: true, 
+        may07: true, 
+        may08: false,
+        may09: true,
+      },
+      {
+        environment: "Integration JP", 
+        may01: true, 
+        may02: true, 
+        may03: false, 
+        may04: true, 
+        may05: true, 
+        may06: false, 
+        may07: true, 
+        may08: true,
+        may09: true
       }
     ]
   },
   {
     environment: "LEXUS", 
-    may01:0, 
-    may02:0, 
-    may03:0, 
-    may04:0, 
-    may05:0, 
-    may06:0, 
-    may07:0, 
-    may08:0,
-    may09:0,
+    may01:true, 
+    may02:true, 
+    may03:true, 
+    may04:true, 
+    may05:true, 
+    may06:true, 
+    may07:true, 
+    may08:true,
+    may09:true,
     isotopes: [
       {
         environment: "Production", 
-        may01: 99, 
-        may02: 98, 
-        may03: 82, 
-        may04:93, 
-        may05:99, 
-        may06: 97, 
-        may07:93, 
-        may08:97,
-        may09:91,
+        may01: true, 
+        may02: true, 
+        may03: false, 
+        may04: true, 
+        may05: true, 
+        may06: false, 
+        may07: true, 
+        may08: true,
+        may09: true
       },
       {
-        environment: "Integration", 
-        may01: 89, 
-        may02: 89, 
-        may03: 100, 
-        may04:99, 
-        may05:100, 
-        may06: 91, 
-        may07:98, 
-        may08:100,
-        may09:90,
+        environment: "Integration US", 
+        may01: true, 
+        may02: true, 
+        may03: true, 
+        may04: false, 
+        may05: false, 
+        may06: true, 
+        may07: true, 
+        may08: false,
+        may09: true,
+      },
+      {
+        environment: "Integration AU", 
+        may01: true, 
+        may02: true, 
+        may03: true, 
+        may04: false, 
+        may05: false, 
+        may06: true, 
+        may07: true, 
+        may08: false,
+        may09: true,
+      },
+      {
+        environment: "Integration JP", 
+        may01: true, 
+        may02: true, 
+        may03: false, 
+        may04: true, 
+        may05: true, 
+        may06: false, 
+        may07: true, 
+        may08: true,
+        may09: true
       }
     ]
   },
@@ -184,15 +304,15 @@ const ELEMENT_DATA: PeriodicElement[] = [
 ELEMENT_DATA.forEach((element) => {
   if (element.environment === "PYLON" || element.environment === "MOBIUS" || element.environment === "LEXUS") {
     element.isotopes.forEach((isotope) => {
-      element["may01"] += isotope.may01;
-      element["may02"] += isotope.may02;
-      element["may03"] += isotope.may03;
-      element["may04"] += isotope.may04;
-      element["may05"] += isotope.may05;
-      element["may06"] += isotope.may06;
-      element["may07"] += isotope.may07;
-      element["may08"] += isotope.may08;
-      element["may09"] += isotope.may09;
+      element["may01"] = element["may01"] && isotope.may01;
+      element["may02"] = element["may02"] && isotope.may02;
+      element["may03"] = element["may03"] && isotope.may03;
+      element["may04"] = element["may04"] && isotope.may04;
+      element["may05"] = element["may05"] && isotope.may05;
+      element["may06"] = element["may06"] && isotope.may06;
+      element["may07"] = element["may07"] && isotope.may07;
+      element["may08"] = element["may08"] && isotope.may08;
+      element["may09"] = element["may09"] && isotope.may09;
     });
   }
 });
