@@ -20,15 +20,19 @@ export class AppComponent {
   dataSource = ELEMENT_DATA;
   columnsToDisplay = ['environment', 'may01', 'may02', 'may03','may04','may05','may06','may07','may08','may09'];
   isotopeColumnsToDisplay = ['environment', 'may01', 'may02', 'may03','may04','may05','may06','may07','may08','may09'];
-  expandedElement: PeriodicElement | null = null;
+  expandedElements: PeriodicElement[] = [];
 
   toggleExpansion(row: PeriodicElement): void {
-    this.expandedElement = this.expandedElement === row ? null : row;
-    //row.expandedElement = !row.expandedElement;
+    const index = this.expandedElements.indexOf(row);
+    if (index >= 0) {
+      this.expandedElements.splice(index, 1);
+    } else {
+      this.expandedElements.push(row);
+    }
   }
-
+  
   isRowExpanded(row: PeriodicElement): boolean {
-    return this.expandedElement === row;
+    return this.expandedElements.includes(row);
   }
 
   doSomething(element: any) {

@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Webex Calling Dashboard</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-
 </head>
 <body>
   <div id="heading"> 
@@ -54,7 +53,7 @@
     <td mat-cell *matCellDef="let element" [attr.colspan]="columnsToDisplay.length">
       <div
         class="example-element-detail"
-        [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'"
+        [@detailExpand]="expandedElements.includes(element) ? 'expanded' : 'collapsed'"
       >
         <table mat-table [dataSource]="element.isotopes" class="mat-elevation-z8 table2">
           <ng-container matColumnDef="{{ column }}" *ngFor="let column of isotopeColumnsToDisplay;let i = index">
@@ -87,8 +86,8 @@
     mat-row
     *matRowDef="let element; columns: columnsToDisplay"
     class="example-element-row"
-    [class.example-expanded-row]="expandedElement === element"
-    (click)="expandedElement = expandedElement === element ? null : element"
+    [class.example-expanded-row]="expandedElements.includes(element)"
+    (click)="expandedElements.includes(element) ?  expandedElements.splice(expandedElements.indexOf(element), 1) : expandedElements.push(element)"
   ></tr>
   <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>
 </table>
