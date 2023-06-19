@@ -16,10 +16,11 @@ import { MatTableDataSource } from '@angular/material/table';
     ])
   ]
 })
+
 export class AppComponent {  
   dataSource = ELEMENT_DATA;
-  columnsToDisplay = ['environment', 'may01', 'may02', 'may03','may04','may05','may06','may07','may08','may09'];
-  isotopeColumnsToDisplay = ['environment', 'may01', 'may02', 'may03','may04','may05','may06','may07','may08','may09'];
+  columnsToDisplay = ['Environment', 'may01', 'may02', 'may03','may04','may05','may06','may07','may08','may09'];
+  isotopeColumnsToDisplay = ['Environment', 'may01', 'may02', 'may03','may04','may05','may06','may07','may08','may09'];
   expandedElements: PeriodicElement[] = [];
 
   toggleExpansion(row: PeriodicElement): void {
@@ -42,7 +43,7 @@ export class AppComponent {
 }
 
 export interface PeriodicElement {
-  environment: string;
+  Environment: string;
   may01: boolean;
   may02: boolean;
   may03: boolean;
@@ -56,7 +57,7 @@ export interface PeriodicElement {
 }
 
 export interface Isotope{
-  environment: string;
+  Environment: string;
   may01: boolean;
   may02: boolean;
   may03: boolean;
@@ -70,7 +71,7 @@ export interface Isotope{
 
 const ELEMENT_DATA: PeriodicElement[] = [
   {
-    environment: "PYLON", 
+    Environment: "PYLON", 
     may01:true, 
     may02:true, 
     may03:true, 
@@ -82,7 +83,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     may09:true,
     isotopes: [
       {
-        environment: "LGW : Production", 
+        Environment: "LGW : Production", 
         may01: true, 
         may02: true, 
         may03: false, 
@@ -94,7 +95,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         may09: true,
       },
       {
-        environment: "LGW : Integration US ", 
+        Environment: "LGW : Integration US ", 
         may01: true, 
         may02: true, 
         may03: false, 
@@ -106,7 +107,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         may09: true,
       },
       {
-        environment: "LGW : Integration AU", 
+        Environment: "LGW : Integration AU", 
         may01: true, 
         may02: true, 
         may03: true, 
@@ -118,7 +119,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         may09: true,
       },
       {
-        environment: "LGW : Integration JP", 
+        Environment: "LGW : Integration JP", 
         may01: true, 
         may02: true, 
         may03: false, 
@@ -130,7 +131,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         may09: true
       },
       {
-        environment: "SGW : Production", 
+        Environment: "SGW : Production", 
         may01: true, 
         may02: false, 
         may03: true, 
@@ -142,7 +143,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         may09: false
       },
       {
-        environment: "SGW : Integration US ", 
+        Environment: "SGW : Integration US ", 
         may01: true, 
         may02: true, 
         may03: false, 
@@ -154,7 +155,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         may09: true,
       },
       {
-        environment: "SGW : Integration AU", 
+        Environment: "SGW : Integration AU", 
         may01: true, 
         may02: true, 
         may03: true, 
@@ -166,69 +167,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         may09: true,
       },
       {
-        environment: "SGW : Integration JP", 
-        may01: true, 
-        may02: true, 
-        may03: false, 
-        may04: true, 
-        may05: true, 
-        may06: false, 
-        may07: true, 
-        may08: true,
-        may09: true
-      }
-    ]
-  },
-  {
-    environment: "MOBIUS", 
-    may01:true, 
-    may02:true, 
-    may03:true, 
-    may04:true, 
-    may05:true, 
-    may06:true, 
-    may07:true, 
-    may08:true,
-    may09:true,
-    isotopes: [
-      {
-        environment: "Production", 
-        may01: true, 
-        may02: true, 
-        may03: true, 
-        may04: false, 
-        may05: false, 
-        may06: true, 
-        may07: true, 
-        may08: false,
-        may09: true,
-      },
-      {
-        environment: "Integration US", 
-        may01: true, 
-        may02: true, 
-        may03: true, 
-        may04: false, 
-        may05: false, 
-        may06: true, 
-        may07: true, 
-        may08: false,
-        may09: true,
-      },
-      {
-        environment: "Integration AU", 
-        may01: true, 
-        may02: true, 
-        may03: true, 
-        may04: false, 
-        may05: false, 
-        may06: true, 
-        may07: true, 
-        may08: false,
-        may09: true,
-      },
-      {
-        environment: "Integration JP", 
+        Environment: "SGW : Integration JP", 
         may01: true, 
         may02: true, 
         may03: false, 
@@ -242,7 +181,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     ]
   },
   {
-    environment: "LEXUS", 
+    Environment: "MOBIUS", 
     may01:true, 
     may02:true, 
     may03:true, 
@@ -254,7 +193,69 @@ const ELEMENT_DATA: PeriodicElement[] = [
     may09:true,
     isotopes: [
       {
-        environment: "Production", 
+        Environment: "Production", 
+        may01: true, 
+        may02: true, 
+        may03: true, 
+        may04: false, 
+        may05: false, 
+        may06: true, 
+        may07: true, 
+        may08: false,
+        may09: true,
+      },
+      {
+        Environment: "Integration US", 
+        may01: true, 
+        may02: true, 
+        may03: true, 
+        may04: false, 
+        may05: false, 
+        may06: true, 
+        may07: true, 
+        may08: false,
+        may09: true,
+      },
+      {
+        Environment: "Integration AU", 
+        may01: true, 
+        may02: true, 
+        may03: true, 
+        may04: false, 
+        may05: false, 
+        may06: true, 
+        may07: true, 
+        may08: false,
+        may09: true,
+      },
+      {
+        Environment: "Integration JP", 
+        may01: true, 
+        may02: true, 
+        may03: false, 
+        may04: true, 
+        may05: true, 
+        may06: false, 
+        may07: true, 
+        may08: true,
+        may09: true
+      }
+    ]
+  },
+  {
+    Environment: "LEXUS", 
+    may01:true, 
+    may02:true, 
+    may03:true, 
+    may04:true, 
+    may05:true, 
+    may06:true, 
+    may07:true, 
+    may08:true,
+    may09:true,
+    isotopes: [
+      {
+        Environment: "Production", 
         may01: true, 
         may02: true, 
         may03: false, 
@@ -266,7 +267,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         may09: true
       },
       {
-        environment: "Integration US", 
+        Environment: "Integration US", 
         may01: true, 
         may02: true, 
         may03: true, 
@@ -278,7 +279,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         may09: true,
       },
       {
-        environment: "Integration AU", 
+        Environment: "Integration AU", 
         may01: true, 
         may02: true, 
         may03: true, 
@@ -290,7 +291,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         may09: true,
       },
       {
-        environment: "Integration JP", 
+        Environment: "Integration JP", 
         may01: true, 
         may02: true, 
         may03: false, 
@@ -306,7 +307,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 ];
 
 ELEMENT_DATA.forEach((element) => {
-  if (element.environment === "PYLON" || element.environment === "MOBIUS" || element.environment === "LEXUS") {
+  if (element.Environment === "PYLON" || element.Environment === "MOBIUS" || element.Environment === "LEXUS") {
     element.isotopes.forEach((isotope) => {
       element["may01"] = element["may01"] && isotope.may01;
       element["may02"] = element["may02"] && isotope.may02;
